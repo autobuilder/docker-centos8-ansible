@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 LABEL maintainer="AutoBuilder24x7"
 ENV container=docker
 
@@ -22,6 +22,8 @@ RUN yum makecache fast \
  && yum -y install \
       sudo \
       which \
+      hostname \
+      python3 \
       python-pip \
  && yum clean all
 
