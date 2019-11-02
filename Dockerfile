@@ -17,14 +17,14 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install requirements.
 RUN yum makecache --timer \
- && yum -y install deltarpm epel-release initscripts \
+ && yum -y install epel-release initscripts \
  && yum -y update \
  && yum -y install \
       sudo \
       which \
       hostname \
       python3 \
-      python-pip \
+      python3-pip \
  && yum clean all
 
 # Install Ansible via Pip.
