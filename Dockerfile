@@ -27,7 +27,7 @@ RUN yum -y install deltarpm epel-release initscripts \
  && yum clean all
 
 # Install Ansible via Pip.
-RUN pip install $pip_packages
+RUN pip3 install $pip_packages
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
